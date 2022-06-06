@@ -21,26 +21,29 @@ setInterval(() => {
       const hour = time.getHours()
       const minute = time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()
       const sec = time.getSeconds() < 10 ? '0' + time.getSeconds() : time.getSeconds()
-      jackTime.innerHTML = hour + ' : ' + minute + ' : ' + sec
+      //Khánh
+      var time1 = convertTZ(time, 'Asia/Ho_Chi_Minh')
+      const hour1 = time1.getHours() < 10 ? '0' + time1.getHours() : time1.getHours()
+      jackTime.innerHTML = hour1 + ' : ' + minute + ' : ' + sec
       jackDate.innerText = new Date(time).toDateString()
       //Huy
       var time2 = convertTZ(time, 'Asia/Tokyo')
-      const hour2 = time2.getHours()
+      const hour2 = time2.getHours() < 10 ? '0' + time2.getHours() : time2.getHours()
       huyTime.innerHTML = hour2 + ' : ' + minute + ' : ' + sec
       huyDate.innerText = new Date(time2).toDateString()
       //Duyên
       var time3 = convertTZ(time, 'Europe/Berlin')
-      const hour3 = time3.getHours()
+      const hour3 = time3.getHours() < 10 ? '0' + time3.getHours() : time3.getHours()
       duyenTime.innerHTML = hour3 + ' : ' + minute + ' : ' + sec
       duyenDate.innerText = new Date(time3).toDateString()
       //Tiên
       var time4 = convertTZ(time, 'Pacific/Auckland')
-      const hour4 = time4.getHours()
+      const hour4 = time4.getHours() < 10 ? '0' + time4.getHours() : time4.getHours()
       tienTime.innerHTML = hour4 + ' : ' + minute + ' : ' + sec
       tienDate.innerText = new Date(time4).toDateString()
       //Mèo
       var time5 = convertTZ(time, 'Australia/Melbourne')
-      const hour5 = time5.getHours()
+      const hour5 = time5.getHours() < 10 ? '0' + time5.getHours() : time5.getHours()
       meoTime.innerHTML = hour5 + ' : ' + minute + ' : ' + sec
       meoDate.innerText = new Date(time5).toDateString()
     })
