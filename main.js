@@ -14,7 +14,7 @@ function convertTZ(date, tzString) {
 }
 
 setInterval(() => {
-  fetch("http://worldtimeapi.org/api/timezone/Asia/Ho_Chi_Minh")
+  fetch("https://worldtimeapi.org/api/timezone/Asia/Ho_Chi_Minh")
     .then((res) => res.json())
     .then((data) => {
       var time = new Date(data.datetime)
